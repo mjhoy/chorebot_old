@@ -1,0 +1,15 @@
+# ~~ your chore list here              ~~
+# ~~ commented lines start with a #    ~~
+# ~~ chores are separated by a newline ~~
+# ~~ descriptions are optional         ~~
+
+# Hard chores
+Scrub tub: 2 Hard
+Scrub the tub, bub.
+
+# Medium chores
+Sweep kitchen: 1 Medium
+
+# Easy chores
+Feed birds: 3 Easy
+Birdseed is in the garage.

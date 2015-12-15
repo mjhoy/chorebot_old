@@ -1,0 +1,7 @@
+# ~~ your doers list here              ~~
+# ~~ commented lines start with a #    ~~
+# ~~ doers are separated by a newline  ~~
+
+John Doe <john.doe@gmail.com>
+Absent: 12/14/15
+Veto: vaccuum*
