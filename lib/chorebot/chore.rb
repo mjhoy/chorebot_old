@@ -66,6 +66,7 @@ class Chore
       # Whitespace or comment
       if l.match(/^#/) || l.match(/^\s*$/)
         if currently_parsing_chore # the current chore is finished
+          description.chomp! if description
           chores << Chore.new(title, interval, difficulty, description)
           title = nil
           difficulty = nil
@@ -99,6 +100,7 @@ class Chore
     # run this code at the end in case there is no empty line at
     # the end of the file.
     if currently_parsing_chore
+      description.chomp! if description
       chores << Chore.new(title, interval, difficulty, description)
       title = nil
       difficulty = nil
