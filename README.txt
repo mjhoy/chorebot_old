@@ -115,3 +115,7 @@ the file.
 
 The week numbers are simply incrementing integers starting at 1 from
 whenever the bot first runs.
+
+** License
+
+GPL. See COPYING.
