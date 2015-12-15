@@ -1,3 +1,5 @@
+require 'chorebot/result'
+
 class Doer
 
   attr_reader :name, :email, :assigned, :vetoes, :absent

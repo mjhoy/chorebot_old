@@ -1,4 +1,4 @@
-require 'result'
+require 'chorebot/result'
 
 class Chore
   DIFFICULTY = {
