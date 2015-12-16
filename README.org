@@ -35,15 +35,19 @@ A list of chores is defined in chores.txt. A chore is defined in a
 special format, separated by a newline from other chores. The basic
 format is:
 
+#+BEGIN_SRC 
 [Chore title]: [Interval] [Difficulty]
 [Description]
+#+END_SRC
 
 For instance,
 
-  Third floor bathroom: 1 Hard
-  Clean and scrub tub/shower/sink to remove grime, clean toilet bowl,
-  sweep and mop floors, clean countertop, clean mirror, change towels
-  and floor mats, replenish TP and soap as needed.
+#+BEGIN_SRC 
+Third floor bathroom: 1 Hard
+Clean and scrub tub/shower/sink to remove grime, clean toilet bowl,
+sweep and mop floors, clean countertop, clean mirror, change towels
+and floor mats, replenish TP and soap as needed.
+#+END_SRC
 
 The description is optional.
 
@@ -56,28 +60,32 @@ calculation may be adjusted, but it should be something like: one hard
 chore is worth slightly less than two medium chores, and one medium
 chore is worth two easy chores.
 
-You can copy the `chores.example.txt' file to use as a start for
-`chores.txt'.
+You can copy the =chores.example.txt= file to use as a start for
+=chores.txt=.
 
 ** Defining chore-doers
 
 The chore-doers are defined in a "doers.txt" file, with a special
 format, separated by newlines:
 
+#+BEGIN_SRC 
 [Name] <[email]>
 Absent: [Date 1], [Date 2], [...]
 Assigned: [Chore 1], [Chore 2], [...]
 Veto: [Chore 1], [Chore 2], [...]
+#+END_SRC
 
 The three lines starting with Absent, Assigned and Vetoes are
 optional.
 
 For instance,
 
-  Joey Bob <joey@foo.com>
-  Absent: 12/12/15
-  Assigned: President
-  Veto: Third floor bathroom, Mop kitchen
+#+BEGIN_SRC 
+Joey Bob <joey@foo.com>
+Absent: 12/12/15
+Assigned: President
+Veto: Third floor bathroom, Mop kitchen
+#+END_SRC
 
 The Absent: line defines dates for which the chore-doer should be
 removed from the chore assignments. This date should fall on the day
@@ -103,11 +111,13 @@ The chore bot runs once a week and must maintain some state about
 which chores have been assigned. The bot will log to a file
 "assignments.txt" in the format:
 
+#+BEGIN_SRC 
 Week [Week #]
 [Chore 1]: [Doer]
 [Chore 2]: [Doer]
 [...]
 Absent: [Doer 1], [Doer 2], [...]
+#+END_SRC
 
 This file will be written to whenever the chore bot runs and sends
 assignment emails. The most recent week will be added to the top of
