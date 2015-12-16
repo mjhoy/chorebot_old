@@ -9,6 +9,15 @@ class Chore
 
   attr_reader :title, :interval, :difficulty, :description
 
+  def == other
+    [title, interval, difficulty, description] ==
+      [other.title, other.interval, other.difficulty, other.description]
+  end
+
+  def <=> other
+    title <=> other.title
+  end
+
   # chore represented as a string
   def to_s
     str = heading_string
