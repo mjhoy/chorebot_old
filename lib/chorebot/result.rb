@@ -1,3 +1,11 @@
+# A Result object represents a calculation that can succeed or fail.
+#
+# For a "successful" calculation, the status attribute must be set to
+# :ok; all other values are assumed to be errors.
+#
+# Succesful calculations have a meaningful result
+# attribute. Otherwise, the error attribute should be a string
+# describing the error.
 class Result
   attr_reader :status
   attr_reader :result
