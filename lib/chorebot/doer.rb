@@ -16,7 +16,6 @@ class Doer
     "#{name} <#{email}>"
   end
 
-
   def heading_string
     to_email_address
   end
