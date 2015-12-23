@@ -4,7 +4,7 @@ require 'date'
 require 'chorebot/assignment'
 require 'chorebot/profile'
 
-class ProfileTest < Minitest::Test
+class ProfileTest < Minitest::Unit::TestCase
 
   def jane_doe
     @_jane_doe ||= Doer.parse(<<TEXT, "testing").result[0]

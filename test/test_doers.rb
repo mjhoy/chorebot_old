@@ -2,7 +2,7 @@ require 'minitest/autorun'
 
 require 'chorebot/doer'
 
-class DoerTest < Minitest::Test
+class DoerTest < Minitest::Unit::TestCase
 
   def test_simple_parse
     text = <<TEXT

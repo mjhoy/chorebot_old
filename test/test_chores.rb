@@ -2,7 +2,7 @@ require 'minitest/autorun'
 
 require 'chorebot/chore'
 
-class TestChore < Minitest::Test
+class TestChore < Minitest::Unit::TestCase
   def test_parse_simple
     text = <<TEXT
 Scrub tub: 1 Medium
