@@ -7,11 +7,19 @@ require 'chorebot/result'
 class Assignment
   attr_reader :doer, :chore, :difficulty, :date
 
-  def initialize doer, chore, difficulty, date
+  def initialize doer, chore, difficulty=nil, date=nil
     @doer = doer
     @chore = chore
-    @difficulty = difficulty
-    @date = date
+    if difficulty.nil?
+      @difficulty = chore.difficulty
+    else
+      @difficulty = difficulty
+    end
+    if date.nil?
+      @date = Date.today
+    else
+      @date = date
+    end
   end
 
   def to_s

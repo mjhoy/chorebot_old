@@ -16,7 +16,7 @@ class Profile
     return 0 if assignments.empty?
     total_difficulty = assignments.inject(0) { |x, a| x + a.difficulty }
     earliest_chore = assignments.inject(current_date) { |d, a| d > a.date ? a.date : d }
-    days_since_start = current_date - earliest_chore
+    days_since_start = (current_date + 1) - earliest_chore
     total_difficulty.to_f / days_since_start
   end
 

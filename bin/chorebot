@@ -10,6 +10,7 @@ subtext = <<HELP
 COMMAND may be:
   list-chores:    List defined chores
   list-doers:     List defined doers
+  assign:         Assign chores; create or append to assignments.txt
 HELP
 
 global = OptionParser.new do |opts|
@@ -30,16 +31,24 @@ subcommands = {
 
                               bot.list_chores
                             end },
+  "list-doers" => lambda { OptionParser.new do |opts|
+                             opts.banner = "Usage: chorebot list-doers [options]"
+                             opts.on("-h", "--help", "Show this message") do
+                               puts opts
+                               exit
+                             end
 
-  "list-doers"  => lambda { OptionParser.new do |opts|
-                              opts.banner = "Usage: chorebot list-doers [options]"
-                              opts.on("-h", "--help", "Show this message") do
-                                puts opts
-                                exit
-                              end
+                             bot.list_doers
+                           end },
+  "assign"     => lambda { OptionParser.new do |opts|
+                             opts.banner = "Usage: chorebot list-doers [options]"
+                             opts.on("-h", "--help", "Show this message") do
+                               puts opts
+                               exit
+                             end
 
-                              bot.list_doers
-                            end }
+                             bot.assign!
+                           end }
 }
 
 global.order!

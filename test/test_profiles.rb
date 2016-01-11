@@ -20,7 +20,7 @@ class ProfileTest < Minitest::Unit::TestCase
     profile = Profile.new jane_doe, assignments, current_date
 
     assert_equal(
-      scrub_tub.difficulty.to_f / 7,
+      scrub_tub.difficulty.to_f / 8, # not 7 to account for the same day
       profile.average_difficulty_per_day
     )
   end
@@ -36,7 +36,7 @@ class ProfileTest < Minitest::Unit::TestCase
     profile = Profile.new jane_doe, assignments, current_date
 
     assert_equal(
-      (scrub_tub.difficulty.to_f + clean_fridge.difficulty) / 14,
+      (scrub_tub.difficulty.to_f + clean_fridge.difficulty) / 15,
       profile.average_difficulty_per_day
     )
 
